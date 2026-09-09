@@ -1,7 +1,1765 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>序光｜LUMEN</title>
+
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500&family=Playfair+Display:wght@400&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* ===============================
+           BASIC
+        =============================== */
+
+        :root {
+
+            --forest: #344d38;
+            --forest-dark: #203326;
+
+            --cream: #f7f4ec;
+            --paper: #fcfbf7;
+
+            --wood: #8b735b;
+
+            --text: #383831;
+            --muted: #77756d;
+
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            background: var(--paper);
+
+            color: var(--text);
+
+            font-family:
+                "Noto Serif TC",
+                "Microsoft JhengHei",
+                serif;
+
+            font-weight: 300;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* ===============================
+           NAVBAR
+        =============================== */
+
+        .navbar {
+
+            height: 82px;
+
+            background:
+                rgba(252,251,247,.94);
+
+            backdrop-filter:
+                blur(12px);
+
+            border-bottom:
+                1px solid rgba(50,70,55,.12);
+
+        }
+
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            color: var(--forest-dark);
+
+            text-decoration: none;
+
+        }
+
+
+        /* Logo 圓形森林 */
+
+        .logo-circle {
+
+            width: 48px;
+
+            height: 48px;
+
+            border:
+                1px solid var(--forest);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .logo-circle::before {
+
+            content: "▲";
+
+            position: absolute;
+
+            bottom: 5px;
+
+            font-size: 18px;
+
+            color: var(--forest);
+
+            letter-spacing: -6px;
+
+        }
+
+
+        .logo-circle::after {
+
+            content: "✦";
+
+            position: absolute;
+
+            top: 3px;
+
+            font-size: 11px;
+
+            color: var(--wood);
+
+        }
+
+
+        .brand-name {
+
+            font-size: 1.15rem;
+
+            letter-spacing: .18em;
+
+        }
+
+
+        .brand-en {
+
+            display: block;
+
+            margin-top: -7px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: .55rem;
+
+            letter-spacing: .35em;
+
+            color: var(--muted);
+
+        }
+
+
+        .nav-link {
+
+            color: var(--text) !important;
+
+            font-size: .82rem;
+
+            letter-spacing: .15em;
+
+            margin-left: 22px;
+
+        }
+
+
+        .nav-link:hover {
+
+            color: var(--forest) !important;
+
+        }
+
+
+
+        /* ===============================
+           HERO
+        =============================== */
+
+        .hero {
+
+            min-height: 680px;
+
+            height: calc(100vh - 82px);
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(248,245,237,.97) 0%,
+                    rgba(248,245,237,.88) 34%,
+                    rgba(248,245,237,.35) 68%,
+                    rgba(248,245,237,.05) 100%
+                ),
+
+                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2200&q=90")
+                center / cover no-repeat;
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .hero-logo-text {
+
+            font-size:
+                clamp(4.8rem, 9vw, 7.5rem);
+
+            letter-spacing:
+                .18em;
+
+            font-weight: 300;
+
+            color:
+                var(--forest-dark);
+
+            line-height: 1.1;
+
+        }
+
+
+        .hero-lumen {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 1.25rem;
+
+            letter-spacing:
+                .45em;
+
+            color:
+                var(--forest);
+
+        }
+
+
+        .hero-line {
+
+            width: 60px;
+
+            height: 1px;
+
+            background:
+                var(--forest);
+
+            margin: 30px 0;
+
+        }
+
+
+        .hero-slogan {
+
+            font-size: 1.15rem;
+
+            letter-spacing:
+                .17em;
+
+            color:
+                #514d45;
+
+        }
+
+
+        .hero-en {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            color:
+                var(--muted);
+
+            font-size: .85rem;
+
+            letter-spacing:
+                .12em;
+
+        }
+
+
+        .hero-btn {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding:
+                8px 28px;
+
+            border:
+                1px solid var(--forest);
+
+            color:
+                var(--forest);
+
+            text-decoration: none;
+
+            font-size: .75rem;
+
+            letter-spacing: .18em;
+
+            transition: .3s;
+
+        }
+
+
+        .hero-btn:hover {
+
+            background:
+                var(--forest);
+
+            color: white;
+
+        }
+
+
+
+        /* ===============================
+           COMMON SECTION
+        =============================== */
+
+        .section {
+
+            padding:
+                110px 0;
+
+        }
+
+
+        .section-label {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            color:
+                #829181;
+
+            font-size:
+                .7rem;
+
+            letter-spacing:
+                .32em;
+
+        }
+
+
+        .section-title {
+
+            font-size:
+                2rem;
+
+            font-weight:
+                300;
+
+            letter-spacing:
+                .18em;
+
+            color:
+                var(--forest-dark);
+
+        }
+
+
+        /* ===============================
+           ABOUT
+        =============================== */
+
+        .about {
+
+            background:
+                var(--paper);
+
+        }
+
+
+        .about-photo {
+
+            height: 410px;
+
+            background:
+
+                url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1300&q=90")
+                center / cover no-repeat;
+
+        }
+
+
+        .about-text {
+
+            max-width:
+                470px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                .9rem;
+
+        }
+
+
+        .leaf {
+
+            color:
+                var(--forest);
+
+            font-size:
+                1.8rem;
+
+            margin-bottom:
+                20px;
+
+        }
+
+
+
+        /* ===============================
+           MENU
+        =============================== */
+
+        .menu {
+
+            background:
+                var(--cream);
+
+        }
+
+
+        .menu-card {
+
+            height: 100%;
+
+            background:
+                rgba(255,255,255,.55);
+
+            padding:
+                28px 22px;
+
+            border:
+                1px solid #e4dfd3;
+
+            transition:
+                .35s;
+
+        }
+
+
+        .menu-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            background:
+                white;
+
+            box-shadow:
+                0 15px 35px
+                rgba(35,55,40,.08);
+
+        }
+
+
+        .menu-photo {
+
+            height: 190px;
+
+            margin-bottom:
+                22px;
+
+            background-size:
+                cover;
+
+            background-position:
+                center;
+
+        }
+
+
+        .latte {
+
+            background-image:
+                url("https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=85");
+
+        }
+
+
+        .pour {
+
+            background-image:
+                url("https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=800&q=85");
+
+        }
+
+
+        .cheese {
+
+            background-image:
+                url("https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=85");
+
+        }
+
+
+        .financier {
+
+            background-image:
+                url("https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=85");
+
+        }
+
+
+        .pudding {
+
+            background-image:
+                url("https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=85");
+
+        }
+
+
+        .menu-name {
+
+            font-size:
+                1rem;
+
+            color:
+                var(--forest-dark);
+
+            letter-spacing:
+                .12em;
+
+        }
+
+
+        .menu-price {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            color:
+                var(--wood);
+
+            font-size:
+                .95rem;
+
+        }
+
+
+        .menu-description {
+
+            color:
+                var(--muted);
+
+            font-size:
+                .75rem;
+
+        }
+
+
+
+        /* ===============================
+           FOREST
+        =============================== */
+
+        .forest {
+
+            padding:
+                0;
+
+            background:
+                var(--forest-dark);
+
+        }
+
+
+        .forest-photo {
+
+            min-height:
+                500px;
+
+            background:
+
+                linear-gradient(
+                    rgba(20,40,27,.12),
+                    rgba(20,40,27,.12)
+                ),
+
+                url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1500&q=90")
+                center / cover no-repeat;
+
+        }
+
+
+        .forest-content {
+
+            min-height:
+                500px;
+
+            padding:
+                70px;
+
+            color:
+                #dce2d9;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+        }
+
+
+        .forest-content .section-title {
+
+            color:
+                #f5f3eb;
+
+        }
+
+
+        .forest-content p {
+
+            color:
+                #c2ccc1;
+
+            font-size:
+                .85rem;
+
+            max-width:
+                460px;
+
+        }
+
+
+
+        /* ===============================
+           SELECT
+        =============================== */
+
+        .select {
+
+            background:
+                var(--cream);
+
+        }
+
+
+        .select-photo {
+
+            height:
+                500px;
+
+            background:
+
+                url("https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1400&q=90")
+                center / cover no-repeat;
+
+        }
+
+
+        .select-content {
+
+            padding:
+                60px;
+
+        }
+
+
+        .select-content p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                .88rem;
+
+        }
+
+
+
+        /* ===============================
+           VISIT
+        =============================== */
+
+        .visit {
+
+            padding:
+                120px 0;
+
+            text-align:
+                center;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+        }
+
+
+        .visit::before {
+
+            content:
+                "❧";
+
+            position:
+                absolute;
+
+            left:
+                7%;
+
+            top:
+                40px;
+
+            font-size:
+                7rem;
+
+            color:
+                rgba(52,77,56,.08);
+
+        }
+
+
+        .visit::after {
+
+            content:
+                "❧";
+
+            position:
+                absolute;
+
+            right:
+                7%;
+
+            bottom:
+                30px;
+
+            font-size:
+                7rem;
+
+            color:
+                rgba(52,77,56,.08);
+
+            transform:
+                rotate(180deg);
+
+        }
+
+
+        .phone {
+
+            display:
+                inline-block;
+
+            margin-top:
+                20px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                2rem;
+
+            color:
+                var(--forest);
+
+            letter-spacing:
+                .1em;
+
+            text-decoration:
+                none;
+
+        }
+
+
+        .phone:hover {
+
+            color:
+                var(--forest-dark);
+
+        }
+
+
+
+        /* ===============================
+           FOOTER
+        =============================== */
+
+        footer {
+
+            background:
+                var(--forest-dark);
+
+            color:
+                #c4ccc2;
+
+            padding:
+                30px 0;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                .65rem;
+
+            letter-spacing:
+                .3em;
+
+        }
+
+
+
+        /* ===============================
+           MOBILE
+        =============================== */
+
+        @media(max-width: 991px) {
+
+            .navbar {
+
+                height:
+                    auto;
+
+            }
+
+
+            .nav-link {
+
+                margin-left:
+                    0;
+
+                padding:
+                    10px 0;
+
+            }
+
+
+            .hero {
+
+                height:
+                    90vh;
+
+                min-height:
+                    600px;
+
+                background:
+
+                    linear-gradient(
+                        rgba(248,245,237,.78),
+                        rgba(248,245,237,.82)
+                    ),
+
+                    url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=90")
+                    center / cover;
+
+            }
+
+
+            .hero-logo-text {
+
+                font-size:
+                    4.8rem;
+
+            }
+
+
+            .forest-content {
+
+                padding:
+                    60px 35px;
+
+            }
+
+
+            .select-content {
+
+                padding:
+                    50px 30px;
+
+            }
+
+        }
+
+
+        @media(max-width: 576px) {
+
+            .section {
+
+                padding:
+                    80px 0;
+
+            }
+
+
+            .hero-logo-text {
+
+                font-size:
+                    4rem;
+
+            }
+
+
+            .hero-slogan {
+
+                font-size:
+                    1rem;
+
+            }
+
+
+            .about-photo {
+
+                height:
+                    300px;
+
+            }
+
+
+            .menu-photo {
+
+                height:
+                    220px;
+
+            }
+
+
+            .forest-photo {
+
+                min-height:
+                    350px;
+
+            }
+
+
+            .forest-content {
+
+                min-height:
+                    420px;
+
+            }
+
+
+            .select-photo {
+
+                height:
+                    350px;
+
+            }
+
+
+            .phone {
+
+                font-size:
+                    1.5rem;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
 <body>
-  <h1>Hello World</h1>
-  <p>這是我用 GitHub Pages 發佈的第一個網頁。</p>
+
+
+<!-- ===================================
+     NAVBAR
+=================================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+
+        <a href="#home" class="brand">
+
+
+            <div class="logo-circle"></div>
+
+
+            <div>
+
+                <span class="brand-name">
+                    序光
+                </span>
+
+                <span class="brand-en">
+                    LUMEN
+                </span>
+
+            </div>
+
+
+        </a>
+
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navMenu">
+
+
+            <ul class="navbar-nav ms-auto">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#home">
+
+                        首頁
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#about">
+
+                        序光
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#coffee">
+
+                        咖啡
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#select">
+
+                        選物
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#visit">
+
+                        來訪
+
+                    </a>
+
+                </li>
+
+
+            </ul>
+
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ===================================
+     HERO
+=================================== -->
+
+<section
+    id="home"
+    class="hero">
+
+
+    <div class="container hero-content">
+
+
+        <div class="row">
+
+            <div class="col-lg-6">
+
+
+                <div class="hero-logo-text">
+
+                    序光
+
+                </div>
+
+
+                <div class="hero-lumen">
+
+                    L U M E N
+
+                </div>
+
+
+                <div class="hero-line"></div>
+
+
+                <div class="hero-slogan">
+
+                    一日之間，序一杯光。
+
+                </div>
+
+
+                <div class="hero-en mt-2">
+
+                    A Little Light in Every Day.
+
+                </div>
+
+
+                <a
+                    href="#coffee"
+                    class="hero-btn">
+
+                    探索序光
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================
+     ABOUT
+=================================== -->
+
+<section
+    id="about"
+    class="section about">
+
+
+    <div class="container">
+
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6">
+
+                <div class="about-photo"></div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+
+                <div class="leaf">
+                    ❧
+                </div>
+
+
+                <div class="section-label">
+                    ABOUT LUMEN
+                </div>
+
+
+                <h2 class="section-title mt-2 mb-4">
+
+                    關於序光
+
+                </h2>
+
+
+                <p class="about-text">
+
+                    提供舒適體驗及人文。
+
+                    <br><br>
+
+                    序光相信，咖啡不只是飲品，
+                    而是一種讓生活慢下來的方式。
+
+                    <br><br>
+
+                    我們希望打造一個像森林一樣的空間，
+                    有自然、有木質、有陽光，
+                    也有一杯值得慢慢喝完的咖啡。
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================
+     COFFEE
+=================================== -->
+
+<section
+    id="coffee"
+    class="section menu">
+
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+
+            <div class="section-label">
+                COFFEE & DESSERT
+            </div>
+
+
+            <h2 class="section-title mt-2">
+                咖啡與甜點
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- Latte -->
+
+            <div class="col-md-6 col-lg">
+
+
+                <div class="menu-card">
+
+
+                    <div class="menu-photo latte"></div>
+
+
+                    <div class="d-flex justify-content-between">
+
+                        <h3 class="menu-name">
+                            拿鐵
+                        </h3>
+
+                        <span class="menu-price">
+                            NT$70
+                        </span>
+
+                    </div>
+
+
+                    <p class="menu-description">
+
+                        柔和奶香，適合日常的一杯。
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Pour Over -->
+
+            <div class="col-md-6 col-lg">
+
+
+                <div class="menu-card">
+
+
+                    <div class="menu-photo pour"></div>
+
+
+                    <div class="d-flex justify-content-between">
+
+                        <h3 class="menu-name">
+                            手沖咖啡
+                        </h3>
+
+                        <span class="menu-price">
+                            NT$80
+                        </span>
+
+                    </div>
+
+
+                    <p class="menu-description">
+
+                        細緻風味，慢慢品飲。
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Basque -->
+
+            <div class="col-md-6 col-lg">
+
+
+                <div class="menu-card">
+
+
+                    <div class="menu-photo cheese"></div>
+
+
+                    <div class="d-flex justify-content-between">
+
+                        <h3 class="menu-name">
+                            巴斯克乳酪蛋糕
+                        </h3>
+
+                        <span class="menu-price">
+                            NT$100
+                        </span>
+
+                    </div>
+
+
+                    <p class="menu-description">
+
+                        經典、適合搭配咖啡。
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Financier -->
+
+            <div class="col-md-6 col-lg">
+
+
+                <div class="menu-card">
+
+
+                    <div class="menu-photo financier"></div>
+
+
+                    <div class="d-flex justify-content-between">
+
+                        <h3 class="menu-name">
+                            費南雪
+                        </h3>
+
+                        <span class="menu-price">
+                            NT$120
+                        </span>
+
+                    </div>
+
+
+                    <p class="menu-description">
+
+                        小巧精緻，很有日系咖啡館感。
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- Pudding -->
+
+            <div class="col-md-6 col-lg">
+
+
+                <div class="menu-card">
+
+
+                    <div class="menu-photo pudding"></div>
+
+
+                    <div class="d-flex justify-content-between">
+
+                        <h3 class="menu-name">
+                            季節布丁
+                        </h3>
+
+                        <span class="menu-price">
+                            NT$120
+                        </span>
+
+                    </div>
+
+
+                    <p class="menu-description">
+
+                        隨季節更換，增加品牌的新鮮感。
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================
+     FOREST
+=================================== -->
+
+<section class="forest">
+
+
+    <div class="container-fluid p-0">
+
+
+        <div class="row g-0">
+
+
+            <div
+                class="col-lg-6 forest-photo">
+            </div>
+
+
+            <div
+                class="col-lg-6 forest-content">
+
+
+                <div>
+
+
+                    <div class="section-label">
+                        INTO THE FOREST
+                    </div>
+
+
+                    <h2 class="section-title mt-2 mb-4">
+
+                        在森林與咖啡之間
+
+                    </h2>
+
+
+                    <p>
+
+                        城市很快，<br>
+                        但生活不一定要跟著變快。
+
+                    </p>
+
+
+                    <p>
+
+                        在序光，
+                        我們保留一點空白，
+                        讓陽光、樹影與咖啡香，
+                        慢慢填滿午後。
+
+                    </p>
+
+
+                    <p>
+
+                        這裡沒有急著離開的理由。
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================
+     SELECT
+=================================== -->
+
+<section
+    id="select"
+    class="section select">
+
+
+    <div class="container">
+
+
+        <div class="row g-0 align-items-center">
+
+
+            <div class="col-lg-6">
+
+
+                <div class="select-photo"></div>
+
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+
+                <div class="select-content">
+
+
+                    <div class="section-label">
+                        SELECTED ITEMS
+                    </div>
+
+
+                    <h2 class="section-title mt-2 mb-4">
+
+                        選物
+
+                    </h2>
+
+
+                    <p>
+
+                        挑選一些與生活相處舒服的物件，
+                        讓來到序光的片刻，
+                        也能延伸到日常。
+
+                    </p>
+
+
+                    <p>
+
+                        器物、文字、香氣與光影，
+                        不追求繁複，
+                        只留下真正喜歡的。
+
+                    </p>
+
+
+                    <p>
+
+                        希望你離開序光之後，
+                        仍然能把一點喜歡帶回生活。
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================
+     VISIT
+=================================== -->
+
+<section
+    id="visit"
+    class="visit">
+
+
+    <div class="container">
+
+
+        <div class="section-label">
+            VISIT LUMEN
+        </div>
+
+
+        <h2 class="section-title mt-2 mb-4">
+
+            來訪
+
+        </h2>
+
+
+        <p class="text-muted">
+
+            如果今天剛好需要一點光，<br>
+            歡迎來坐坐。
+
+        </p>
+
+
+        <a
+            href="tel:0933456789"
+            class="phone">
+
+            ☎ 0933 456 789
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ===================================
+     FOOTER
+=================================== -->
+
+<footer>
+
+    <div class="container text-center">
+
+        LUMEN ALL RIGHTS RESERVED
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
 </body>
+
 </html>
+```
